@@ -1,0 +1,139 @@
+Build a modern, dynamic, and responsive Tic-Tac-Toe web application with a fluid, polished UI. It must look premium, play smoothly, and feel delightful on both phones and laptops. Use React (TypeScript preferred) and TailwindCSS for styling. Keep code modular, animated, and production-ready.
+
+
+
+CORE FEATURES:
+
+1. **Dynamic Board Sizes** — Allow users to pick 3x3, 4x4, 5x5, or any custom N×N (N ≥ 3). Include a modern selector or slider UI to choose board size dynamically.
+
+2. **Custom Win Condition** — Default win-length K = N, but allow user to choose custom K (3 ≤ K ≤ N).
+
+3. **Game Modes** — Human vs Human (local) and Human vs AI (Easy / Medium / Hard using minimax + heuristics for large boards).
+
+4. **Responsive UI** — Auto-adjust cell sizes and layout for both mobile and laptop. Smooth grid resize animation when user changes board size.
+
+5. **Themes and Modes**:
+
+   - **Light / Dark Mode toggle** with smooth fade transition (persist in localStorage).
+
+   - At least **6 visual themes**: Neon, Pastel, Retro Arcade, Dark Matrix, Ocean, Forest — each with unique background, colors, and font vibe.
+
+   - A “Theme Gallery” page with live previews and soft hover-glow effects.
+
+   - Theme switching should use a **crossfade animation** (smooth color and background blending).
+
+6. **Smooth Dynamic Animations**:
+
+   - Subtle hover bounce on cells.
+
+   - Button press ripple or spring animation.
+
+   - Page transitions with fade-slide effects.
+
+   - Dynamic camera-like zoom when game starts or resets.
+
+7. **Winning Animation (Flying Players)**:
+
+   - When a player wins, their markers “fly” off the board with gravity and easing-out motion.
+
+   - Use CSS transforms or Framer Motion for realistic “lift and float away” animation, plus optional confetti or spark particles.
+
+   - Include subtle slow-motion before the winning animation triggers.
+
+8. **Sound & Feedback**:
+
+   - Gentle click sound on each move, celebration sound on win (toggleable).
+
+   - Vibrate on mobile when a win or draw occurs (navigator.vibrate fallback).
+
+9. **Undo / Reset / New Game**:
+
+   - Smooth “rewind” animation for undo (markers fade and shrink away).
+
+   - Soft fade transition for new game or theme change.
+
+10. **Dynamic Text & Motion**:
+
+   - Animated “Player Turn” text that slides or fades when switching turns.
+
+   - Status messages appear with blur-in effects.
+
+11. **Performance Optimization**:
+
+   - Use requestAnimationFrame for smooth motion.
+
+   - Lazy-load non-essential assets.
+
+   - Support 60 FPS animation even on mid-range phones.
+
+12. **Accessibility**:
+
+   - Full keyboard navigation.
+
+   - Screen reader support via ARIA roles.
+
+   - Respect `prefers-reduced-motion` and reduce effects accordingly.
+
+13. **Persistence**:
+
+   - Store board size, theme, sound preference, and last winner in localStorage.
+
+
+
+MARKDOWN FILES (.md):
+
+- `README.md`: Setup + run instructions, features, keyboard shortcuts, screenshots, animation overview, how to add themes.
+
+- `THEMES.md`: Lists and describes all themes with color codes, sample preview screenshots, and instructions to create new ones via Tailwind variables.
+
+- `GAME_DOC.md`: Game logic, algorithm explanation for N×N + K win detection, animation triggers, and accessibility details.
+
+- `CHANGELOG.md`: Version history starting from v1.0.
+
+- `LICENSE`: MIT License by default.
+
+
+
+TECHNICAL NOTES:
+
+- Use Framer Motion or CSS keyframes for smooth transitions.
+
+- Use easing functions (`ease-out`, `ease-in-out`, `cubic-bezier`, `spring`) for realistic physics.
+
+- Add blur/fade combo for transitions (`backdrop-blur`, `opacity`, `scale`).
+
+- Provide custom hooks for theme management (`useTheme`, `useBoardSettings`).
+
+- Winner detection logic should run efficiently (O(N² × K) or better) with comments explaining the algorithm.
+
+- Persist user state in localStorage, and auto-apply theme + settings on reload.
+
+- Animations should degrade gracefully on low-end devices.
+
+
+
+DELIVERABLES:
+
+1. Full source code (React + Tailwind project).
+
+2. All `.md` documentation files listed above.
+
+3. A single-page demo that can run via `npm start`.
+
+4. Clean, modular folder structure (`components/`, `hooks/`, `styles/`, `assets/`).
+
+5. Screenshots or GIF instructions inside `README.md`.
+
+
+
+USER EXPERIENCE GOAL:
+
+- When the player wins, the board should react dynamically — a short camera shake, soft light pulse, then the winning Xs/Os float upward gracefully.
+
+- Theme and motion should feel cinematic yet smooth.
+
+- Everything should feel “alive” — from buttons to transitions.
+
+
+
+Make it look and feel premium, with soft, dynamic interactions that impress users instantly.
